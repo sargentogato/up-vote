@@ -1,5 +1,5 @@
 <template>
-  <article class="flex gap-3 border p-5 w-fit">
+  <article class="flex gap-3 border p-5">
     <figure>
       <img class="w-[64px]" :src="submissionImage" />
     </figure>
@@ -32,17 +32,21 @@
 <script>
 export default {
   name: "Upvote",
-  props: [
-    "id",
-    "title",
-    "description",
-    "url",
-    "votes",
-    "avatar",
-    "submissionImage",
-  ],
+  props: {
+    id: Number,
+    title: String,
+    description: String,
+    votes: Number,
+    avatar: String,
+    submissionImage: String,
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+article {
+  width: 60%;
+  min-width: 400px;
+}
+</style>
